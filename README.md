@@ -25,11 +25,10 @@ This project is designed to showcase an Artificial Intelligence course, its curr
 
 ## 🛠️ Technologies Used
 
-- **HTML5** – Page structure
-- **CSS3** – Styling and layout
-- **JavaScript (Vanilla JS)** – Form validation & interactivity
+- HTML5 – Page structure
+- CSS3 – Styling and layout
+- JavaScript 
 
 ---
 
-## 📂 Project Structure
 
