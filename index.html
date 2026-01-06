@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Course Admission | AI Academy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header>
+  <div class="logo">AI Academy</div>
+  <nav>
+    <ul>
+      <li><a href="#about">About AI</a></li>
+      <li><a href="#curriculum">Curriculum</a></li>
+      <li><a href="#why-ai">Why AI?</a></li>
+      <li><a href="#admission">Admission</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Build Your Career in Artificial Intelligence</h1>
+  <p>Industry-Ready AI Skills • Real Projects • Expert Mentorship</p>
+  <a href="#admission" class="btn">Apply Now</a>
+</section>
+
+<!-- About -->
+<section id="about" class="services">
+  <h2>About Artificial Intelligence</h2>
+
+  <div class="about-content">
+    <img src="https://images.unsplash.com/photo-1676299081847-824916de030a?q=80&w=800" alt="AI Concept">
+
+    <div class="about-text">
+      Artificial Intelligence enables machines to think, learn and solve problems.
+      AI powers modern healthcare, finance, automation and cybersecurity.
+      <br><br>
+      Our AI course is designed to make you job-ready with real-world projects.
+    </div>
+  </div>
+</section>
+
+<!-- Curriculum -->
+<section id="curriculum" class="services">
+  <h2>Course Curriculum</h2>
+
+  <div class="service-cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=600">
+      <h3>Machine Learning</h3>
+      <p>Algorithms, models and real datasets.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=600">
+      <h3>Deep Learning</h3>
+      <p>Neural networks, CNN, RNN.</p>
+    </div>
+
+    
+    <div class="card">
+  <img src="https://images.unsplash.com/photo-1535378620166-273708d44e4c?q=80&w=600" alt="AI Projects">
+  <h3>AI Projects</h3>
+  <p>NLP, computer vision & automation.</p>
+</div>
+  </div>
+</section>
+
+<!-- Why AI -->
+<section id="why-ai" class="services">
+  <h2>Why Choose AI?</h2>
+
+  <div class="service-cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?q=80&w=600">
+      <h3>High Demand</h3>
+      <p>One of the highest paying tech careers.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=600">
+      <h3>Future Proof</h3>
+      <p>Skills that last for decades.</p>
+    </div>
+
+   <div class="card">
+  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80
+" alt="Hands-on Learning">
+  <h3>Hands-on Learning</h3>
+  <p>Portfolio-ready projects.</p>
+</div>
+  </div>
+</section>
+
+<!-- Admission -->
+<section id="admission">
+  
+
+  <form>
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <textarea placeholder="Why do you want to join AI? (Optional)"></textarea>
+    <button type="submit">Submit Application</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 AI Academy • Designed for Future Innovators
+</footer>
+
+</footer>
+
+<script>
+  // Make sure the form exists
+  const form = document.querySelector("#admission form");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = form.querySelector('input[type="text"]').value.trim();
+      const email = form.querySelector('input[type="email"]').value.trim();
+
+      // Name validation
+      if (!/^[A-Za-z ]{3,}$/.test(name)) {
+        alert("Please enter a valid full name (letters only).");
+        return;
+      }
+
+      // Email validation
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      // SUCCESS POPUP
+      alert("Thank you for applying to the AI Course! We will contact you soon.");
+
+      form.reset();
+    });
+  } else {
+    console.error("Form not found");
+  }
+</script>
+
+</body>
+</html>
