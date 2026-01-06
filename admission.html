@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admission Form | AI Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">AI Academy</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="services">
+  <h2>AI Course Admission Form</h2>
+
+  <form class="admission-form">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <textarea placeholder="Why do you want to join AI?"></textarea>
+    <button type="submit">Apply</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 AI Academy
+</footer>
+<script>
+  const form = document.querySelector(".admission-form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nameInput = form.querySelector('input[type="text"]');
+    const emailInput = form.querySelector('input[type="email"]');
+    const reasonInput = form.querySelector('textarea');
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const reason = reasonInput.value.trim();
+
+    // EMPTY NAME
+    if (name === "") {
+      alert("❌ Please enter your full name.");
+      nameInput.focus();
+      return;
+    }
+
+    // INVALID NAME
+    if (!/^[A-Za-z ]{3,}$/.test(name)) {
+      alert("❌ Name should contain only letters and at least 3 characters.");
+      nameInput.focus();
+      return;
+    }
+
+    // EMPTY EMAIL
+    if (email === "") {
+      alert("❌ Please enter your email address.");
+      emailInput.focus();
+      return;
+    }
+
+    // INVALID EMAIL
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      alert("❌ Please enter a valid email address.");
+      emailInput.focus();
+      return;
+    }
+
+    // EMPTY TEXTAREA
+    if (reason === "") {
+      alert("❌ Please tell us why you want to join AI.");
+      reasonInput.focus();
+      return;
+    }
+
+    // MINIMUM LENGTH CHECK (OPTIONAL BUT GOOD)
+    if (reason.length < 10) {
+      alert("❌ Please write at least 10 characters.");
+      reasonInput.focus();
+      return;
+    }
+
+    // SUCCESS
+    alert("✅ Application submitted successfully! We will contact you soon.");
+    form.reset();
+  });
+</script>
+
+
+</body>
+</html>
