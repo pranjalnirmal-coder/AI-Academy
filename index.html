@@ -16,7 +16,8 @@
       <li><a href="#about">About AI</a></li>
       <li><a href="#curriculum">Curriculum</a></li>
       <li><a href="#why-ai">Why AI?</a></li>
-      <li><a href="#admission">Admission</a></li>
+      <li><a href="admission.html">Admission</a></li>
+      
     </ul>
   </nav>
 </header>
@@ -25,7 +26,7 @@
 <section class="hero">
   <h1>Build Your Career in Artificial Intelligence</h1>
   <p>Industry-Ready AI Skills • Real Projects • Expert Mentorship</p>
-  <a href="#admission" class="btn">Apply Now</a>
+  <a href="admission.html" class="btn">Apply Now</a>
 </section>
 
 <!-- About -->
@@ -96,56 +97,12 @@
   </div>
 </section>
 
-<!-- Admission -->
-<section id="admission">
-  
-
-  <form>
-    <input type="text" placeholder="Full Name" required>
-    <input type="email" placeholder="Email Address" required>
-    <textarea placeholder="Why do you want to join AI? (Optional)"></textarea>
-    <button type="submit">Submit Application</button>
-  </form>
-</section>
-
 <footer>
   © 2026 AI Academy • Designed for Future Innovators
 </footer>
 
 </footer>
 
-<script>
-  // Make sure the form exists
-  const form = document.querySelector("#admission form");
-
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const name = form.querySelector('input[type="text"]').value.trim();
-      const email = form.querySelector('input[type="email"]').value.trim();
-
-      // Name validation
-      if (!/^[A-Za-z ]{3,}$/.test(name)) {
-        alert("Please enter a valid full name (letters only).");
-        return;
-      }
-
-      // Email validation
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert("Please enter a valid email address.");
-        return;
-      }
-
-      // SUCCESS POPUP
-      alert("Thank you for applying to the AI Course! We will contact you soon.");
-
-      form.reset();
-    });
-  } else {
-    console.error("Form not found");
-  }
-</script>
 
 </body>
 </html>
