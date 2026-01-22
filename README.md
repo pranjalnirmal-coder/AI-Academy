@@ -6,6 +6,7 @@ This project is designed to showcase an Artificial Intelligence course, its curr
 ---
 
 ## 🌐 Live Preview
+"https://pranjalnirmal-coder.github.io/AI-Academy/"
 > Open `index.html` in your browser to view the website.
 
 ---
