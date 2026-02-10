@@ -50,6 +50,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h2>AI Academy Feedback Survey</h2>
@@ -79,5 +80,16 @@
             <button type="submit">Submit Survey</button>
         </form>
     </div>
+
+    <script>
+        const form = document.getElementById("surveyForm");
+
+        form.addEventListener("submit", function () {
+            setTimeout(() => {
+                form.reset();
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>
