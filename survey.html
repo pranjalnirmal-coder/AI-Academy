@@ -84,10 +84,16 @@
     <script>
         const form = document.getElementById("surveyForm");
 
+        // Clear form after submit
         form.addEventListener("submit", function () {
             setTimeout(() => {
                 form.reset();
             }, 100);
+        });
+
+        // Clear form when user comes back using browser back button
+        window.addEventListener("pageshow", function () {
+            form.reset();
         });
     </script>
 
